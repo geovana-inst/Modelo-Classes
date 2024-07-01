@@ -1,0 +1,100 @@
+private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    // Pega os valores dos campos de texto
+    String num1 = jTextField1.getText();
+    String num2 = jTextField2.getText();
+    
+    // Converte os valores para inteiros
+    int n1 = Integer.parseInt(num1);
+    int n2 = Integer.parseInt(num2);
+    
+    // Realiza a soma
+    int resultado = n1 + n2;
+    
+    // Define o resultado no campo de texto de resultado
+    jTextField3.setText(String.valueOf(resultado));
+}
+package my.calculator;
+
+import javax.swing.*;
+
+public class Calculator extends JFrame {
+
+    private JButton addButton;
+    private JTextField num1Field;
+    private JTextField num2Field;
+    private JTextField resultField;
+    private JLabel plusLabel;
+    private JLabel equalsLabel;
+
+    public Calculator() {
+        initComponents();
+    }
+
+    private void initComponents() {
+
+        num1Field = new JTextField();
+        num2Field = new JTextField();
+        resultField = new JTextField();
+        plusLabel = new JLabel("+");
+        equalsLabel = new JLabel("=");
+        addButton = new JButton("Add");
+
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtonActionPerformed(evt);
+            }
+        });
+
+        GroupLayout layout = new GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(num1Field, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(plusLabel)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(num2Field, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(equalsLabel)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(resultField, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(addButton)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(num1Field, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plusLabel)
+                    .addComponent(num2Field, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(equalsLabel)
+                    .addComponent(resultField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addButton))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        pack();
+    }
+
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        int num1 = Integer.parseInt(num1Field.getText());
+        int num2 = Integer.parseInt(num2Field.getText());
+        int result = num1 + num2;
+        resultField.setText(String.valueOf(result));
+    }
+
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Calculator().setVisible(true);
+            }
+        });
+    }
+}
