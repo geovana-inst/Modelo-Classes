@@ -1,0 +1,370 @@
+package view;
+
+import javax.swing.*;
+
+public class TurmaFrame {
+
+    private JButton listarAlunosButton;
+    private JButton resultdosButton;
+    private JButton novoAlunoButton;
+    private Controlador controlador;
+
+    public JButton getListarAlunosButton() {
+        return listarAlunosButton;
+    }
+
+    public void setListarAlunosButton(JButton listarAlunosButton) {
+        this.listarAlunosButton = listarAlunosButton;
+    }
+
+    public JButton getResultdosButton() {
+        return resultadosButton;
+    }
+
+    public void setResultadosButton(JButton resultadosButton) {
+        this.resultadosButton = resultadosButton;
+    }
+
+    public JButton getNovoAlunoButton() {
+        return novoAlunoButton;
+    }
+
+    public void setNovoAlunoButton(JButton novoAlunoButton) {
+        this.novoAlunoButton = novoAlunoButton;
+    }
+
+    public Controlador getControlador() {
+        return controlador;
+    }
+
+    public void setControlador(Controlador controlador) {
+        this.controlador = controlador;
+    }
+
+    public static void main(String[] args) {
+
+    }
+
+    private void thisWindowClosing(){
+
+    }
+
+    private void novoAlunoButtonActionPerformed(){
+        
+    }
+}
+===============================================================================================
+package view;
+
+
+import javax.swing.*;
+
+
+public class Alunoframe {
+
+    private JTextField nomeTextFied;
+    private JButton okButton;
+    private JButton cancelarButton;
+    private JTextField notaTextField;
+    private Controlador controlador;
+    private Aluno aluno; 
+    private Boolean editando;
+
+public void setControlador() {
+    return setControlador; 
+}
+
+private void thisWindowClosing() {
+
+}
+
+private void cancelarButtonActionPerfomed() {
+
+}
+
+private void cancelar() {
+
+}
+
+private void okButtonActionPerfomed() {
+
+}
+
+public void setcarregarDados(void carregarDados) {
+    this.carregarDados = carregarDados;
+}
+============================================================================================
+Package view;
+
+import.javax.swing.*;
+
+public class AlunosCadastradosFrame {
+
+    Private JMenuItem cadastrarMenuItem;
+    Private JMenuItem editarMenuitem;
+    Private Jlist Alunoslist;
+    Private Controlador controlador;
+
+public JMenuItem getcadastrarMenuItem()
+{
+    return cadastrarMenuItem;
+  }
+
+    public void
+setcadastrarMenuItem(JMenuItemcadastrarMenuItem) {
+        this.cadastrarMenuItem = cadastrarMenuItem;
+  }
+
+public JMenuItem getcadastrarMenuItem()
+{
+    return cadastrarMenuItem;
+  }
+
+public JMenuItem geteditarMenuItem()
+{
+    return editarMenuItem;
+  }
+
+    public void
+seteditarMenuItem(JMenuItemeditarMenuItem) {
+        this.editarMenuItem = editarMenuItem;
+  }
+
+public JMenuItem geteditarMenuItem()
+{
+    return editarMenuItem;
+  }
+
+public JList getalunosList() {
+        return alunosList;
+    }
+
+    public void setalunosList(JList alunosList) {
+        this.alunosList = alunosList;
+    }
+
+    public JList getalunosList() {
+        return alunosList;
+    }
+
+    public void setalunosList(JList alunosList) {
+        this.alunosList = alunosList;
+    }
+
+    public JList getalunosList() {
+        return alunosList;
+    }
+
+public JList getalunosList() {
+        return alunosList;
+    }
+
+    public void setcontrolador(Controlador controlador) {
+        this.controlador = controlador;
+    }
+
+    public Controlador getcontrolador() {
+        return controlador;
+    }
+
+    public void setcontrolador(Controlador controlador) {
+        this.controlador = controlador;
+    }
+
+    public Controlador getcontrolador() {
+        return controlador;
+    }
+
+ private void controlador(){
+
+    }
+
+public void cadastrarMenuItemActionPerfomed() {
+        return cadastrarMenuItemActionPerfomed;
+    }
+
+    public void setcadastrarMenuItemActionPerfomed(void cadastrarMenuItemActionPerfomed) {
+        this.cadastrarMenuItemActionPerfomed = cadastrarMenuItemActionPerfomed;
+    }
+
+    public void getcadastrarMenuItemActionPerfomed() {
+        return cadastrarMenuItemActionPerfomed;
+    }
+
+    public void setcadastrarMenuItemActionPerfomed(void cadastrarMenuItemActionPerfomed) {
+        this.cadastrarMenuItemActionPerfomed = cadastrarMenuItemActionPerfomed;
+    }
+
+    public void getcadastrarMenuItemActionPerfomed() {
+        return cadastrarMenuItemActionPerfomed;
+    }
+
+public void getcadastrarMenuItemActionPerfomed() {
+        return cadastrarMenuItemActionPerfomed;
+    }
+
+public void editarMenuItemActionPerfomed(void editarMenuItemActionPerfomed) {
+        this.editarMenuItemActionPerfomed = editarMenuItemActionPerfomed;
+    }
+
+    public void geteditarMenuItemActionPerfomed() {
+        return editarMenuItemActionPerfomed;
+    }
+
+    public void seteditarMenuItemActionPerfomed(void editarMenuItemActionPerfomed) {
+        this.editarMenuItemActionPerfomed = editarMenuItemActionPerfomed;
+    }
+
+    public void geteditarMenuItemActionPerfomed() {
+        return editarMenuItemActionPerfomed;
+    }
+
+ private void editarMenuItemActionPerfomed(){
+
+    }
+
+public void setatualizarDados(void atualizarDados) {
+        this.atualizarDados = atualizarDados;
+    }
+
+    public void getatualizarDados() {
+        return atualizarDados;
+    }
+
+    public void setatualizarDados(void atualizarDados) {
+        this.atualizarDados = atualizarDados;
+    }
+
+    public void getatualizarDados() {
+        return atualizarDados;
+    }
+
+ private void atualizarDados(){
+
+    }
+}
+==========================================================================================
+
+package Controller;
+
+import.javax.swing.*;
+
+public class Aluno {
+    private String nome;
+    private int idade;
+    private double nota1;
+    private double nota2;
+    
+    public Aluno(String nome, int idade, double nota1, double nota2) {
+        this.nome = nome;
+        this.idade = idade;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double getNota1() {
+        return nota1;
+    }
+
+    public void setNota1(double nota1) {
+        this.nota1 = nota1;
+    }
+
+    public double getNota2() {
+        return nota2;
+    }
+
+    public void setNota2(double nota2) {
+        this.nota2 = nota2;
+    }
+}
+
+public class Controlador {
+    private Aluno[] alunos;
+    private int pos;
+    private Aluno alunosCadastradosFrame;
+    
+    public Controlador() {
+        alunos = new Aluno[100];
+        pos = 0;
+    }
+    
+    public Aluno[] getAlunos() {
+        return alunos;
+    }
+
+    public void cadastrarAluno(Aluno novoAluno) {
+        alunos[pos] = novoAluno;
+        pos++;
+    }
+
+    public boolean salvarAluno() {
+        return true;
+    }
+
+    public void listarAlunos() {
+        // Lógica para listar os alunos cadastrados
+    }
+
+    public void editarAluno() {
+        // Lógica para editar um aluno
+    }
+
+    public void terminarEdicao() {
+        // Lógica para terminar a edição de um aluno
+    }
+
+    public double calcularMedia() {
+        return 0.0;
+    }
+}
+==========================================================================================
+package Model
+
+import.javax.swing.*;
+
+public class Aluno {
+    private String nome;
+    private double nota;
+    
+    public Aluno(String nome, double nota) {
+        this.nome = nome;
+        this.nota = nota;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+    
+    public String toString() {
+        return "Aluno [nome=" + nome + ", nota=" + nota + "]";
+    }
+}
